@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polls | Home</title>
+    <link href="{% static 'polls/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    {% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h2>No question added yet</h2>
+    {% endif %}
+
+</body>
+</html>

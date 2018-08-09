@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: bisque;
+    width: 50%;
+    font-size: 17px;
+    margin: 20px auto;
+}
+li a {
+    text-decoration: none;
+    color: green;}
+
+li {
+    list-style: none;
+}
